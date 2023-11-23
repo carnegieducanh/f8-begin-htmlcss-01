@@ -54,17 +54,30 @@ a {
 }
 
 /*========== Header ============*/
-.header {
+
+.fixed-header {
+    background: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    display: flex;
+    /* Vì flex khiến thẻ con bị ngang lên khi thêm nội dung> để khắc phục thêm direction */
+    flex-direction: column;
     position: relative;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
     /* margin-top: 50px; (Dùng margin top sẽ xảy ra hiện tượng collslap)*/
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -597,6 +610,10 @@ a {
     height: 28px;
     border-radius: 3px;
     background: #f9f9f9;
+}
+
+.footer .social-link + .social-link {
+    margin-left: 16px;
 }
 
 .footer .social-link:hover {
